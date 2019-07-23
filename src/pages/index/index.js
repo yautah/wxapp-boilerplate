@@ -1,4 +1,5 @@
 //index.js
+//
 import { connect, createSelector } from 'dva-wxapp'
 import wxp from '../../utils/wxp'
 
@@ -7,14 +8,14 @@ const getLocationTxt = createSelector(
   store => store.global.location,
   location => {
     return location ? `${location.latitude} , ${location.longitude}` : ''
-  },
+  }
 )
 
 const mapState = store => {
   return {
     location: store.global.location,
     locating: store.loading.effects['global/getLocation'],
-    locationTxt: getLocationTxt(store),
+    locationTxt: getLocationTxt(store)
   }
 }
 
@@ -28,6 +29,6 @@ Page(
 
     handleTap() {
       this.dispatch({ type: 'global/getLocation' })
-    },
-  }),
+    }
+  })
 )
