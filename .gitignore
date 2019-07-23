@@ -1,0 +1,13 @@
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.idea/
+.log
+*.log
+ehthumbs.db
+Thumbs.db
+node_modules
+miniprogram_npm
+src/project.config.json

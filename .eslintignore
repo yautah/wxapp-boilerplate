@@ -1,0 +1,10 @@
+src/**/*-test.js
+node_modules
+src/dist/
+src/components/wx-parse/
+src/components/minui/
+src/libs/dva.js
+src/libs/redux-logger.js
+src/libs/wx-request/
+src/utils/bomPolyfill.js
+src/utils/es6-promise.min.js

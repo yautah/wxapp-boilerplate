@@ -1,0 +1,36 @@
+{
+  "private": true,
+  "entry": {},
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^3.12.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.8.2"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "clean": "rm -rf dist/*",
+    "lint": "eslint -c .eslintrc ./src"
+  },
+  "lint-staged": {
+    "linters": {
+      "src/**/*.js": [
+        "eslint --fix --quiet",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "src/**/*-test.js",
+      "node_modules",
+      "src/dist/",
+      "src/example/",
+      "src/miniprogram_npm",
+      "src/node_modules"
+    ]
+  }
+}
